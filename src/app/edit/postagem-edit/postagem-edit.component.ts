@@ -65,6 +65,6 @@ export class PostagemEditComponent implements OnInit {
       this.postagem = resp;
       alert("Postagem atualizada com sucesso!");
       this.router.navigate(["/inicio"]);
-    })
+    });
   }
 }
