@@ -20,6 +20,10 @@ export class AuthService {
     return this.http.post<User>("http://localhost:8080/usuarios/cadastrar", user);
   }
 
+  getByIdUser(id: number): Observable<User> {
+    return this.http.get<User>(`http://localhost:8080/usuarios/${id}`,{headers: {"Authorization": environment.token}});
+  }
+
   logado() {
     let ok: boolean = false;
 
