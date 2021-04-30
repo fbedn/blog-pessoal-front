@@ -12,10 +12,6 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  token_em_header = {
-    headers: new HttpHeaders().set("Authorization", environment.token)
-  }
-
   entrar(userLogin: UserLogin): Observable<UserLogin> {
     return this.http.post<UserLogin>(`${environment.baseUrl}/usuarios/logar`, userLogin);
   }
@@ -25,7 +21,7 @@ export class AuthService {
   }
 
   getByIdUser(id: number): Observable<User> {
-    return this.http.get<User>(`${environment.baseUrl}/usuarios/${id}`, this.token_em_header);
+    return this.http.get<User>(`${environment.baseUrl}/usuarios/${id}`, {headers: {"Authorization": environment.token}});
   }
 
   logado() {
