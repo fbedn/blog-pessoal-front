@@ -4,9 +4,9 @@ Disponível em https://blog-fbr.herokuapp.com/
 
 Frontend do projeto Blog Pessoal, feito com Angular, Bootstrap e outras tecnologias. Projeto ainda em desenvolvimento.
 
-# Informações gerais sobre como rodar o front-end do projeto:
-
 Projeto gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 11.2.4.
+
+# Informações gerais sobre como rodar o front-end do projeto:
 
 ## Development server
 
